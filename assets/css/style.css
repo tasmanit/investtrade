@@ -1,6 +1,7 @@
 :root{
     --fontsbig: 'Russo One', sans-serif;
     --fontssmall: 'Roboto', sans-serif;
+    --bigtitle: #3498DB;
 }
 *{
     margin: 0;
@@ -10,6 +11,7 @@
 body{
     color: #333;
     font-size: 1.25em;
+    line-height: 1.25;
     background-color: #fff;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
@@ -69,13 +71,18 @@ body{
 
 }
 .topline-menu a{
-    padding: 10px 15px;
+    padding: 12px 15px;
     border-radius: 20px;
-    font-size: 1em;
+    font-size: .9em;
     color: #333;
 }
 .topline-menu a i{
     margin-right: 5px;
+}
+.topline-menu a.logo{
+    font-family: var(--fontsbig);
+    font-size: 1.1em;
+    color: var(--bigtitle);
 }
 .topline-menu a.whatsapp{
     background: rgba(37, 211, 102, 1);
@@ -88,11 +95,20 @@ body{
 
 .topline-menu a.phone{
     font-family: var(--fontsbig);
+    color: var(--bigtitle);
 }
 .topline-menu a.phone i{
     color: rgba(52, 183, 241, 1);
 }
+.topline-menu a.burgermenu{
+    background: var(--bigtitle);
+    border-radius: 0;
+    color: #fff;
 
+}
+.topline-menu a.burgermenu i{
+    margin-right: 0;
+}
 .topline-menu a:hover{
     text-decoration: none;
     transform: scale(1.1);
@@ -103,13 +119,14 @@ body{
     top: 50vh;
     left: 0;
     right: 0;
-    transform: translateY(-40%);
+    transform: translateY(-45%);
 }
 .centerline-items{}
 .centerline-items h1{
     font-family: var(--fontsbig);
     color: #fff;
-    font-size: 3em;
+    font-size: 4em;
+    line-height: 1;
     text-shadow: 1px 10px 30px 2px rgb(130 67 79 / 25%);
 }
 .centerline-items h1 span{
@@ -117,6 +134,8 @@ body{
 }
 .centerline-items p{
     color: #ccc;
+    width: 80%;
+    
 }
 
 
@@ -144,6 +163,7 @@ body{
     cursor: pointer;
     transform: translateY(25px);
     transition: .5s;
+    color: var(--bigtitle)
 }
 .bottomline-items .item:hover{
     transform: translateY(5px);
@@ -152,29 +172,35 @@ body{
 
 /* service */
 .service{
-    padding: 50px 0;
+    padding: 100px 0 0;
 }
 .service-title{
+    font-size: 3em;
     font-family: var(--fontsbig);
     margin-bottom: 30px;
+    color: var(--bigtitle)
 }
 
 .service-items{
     display: flex;
     flex-wrap: wrap;
 }
-.service-item:hover .item-img img{
-    transform: scale(3);
-}
 .service-item:nth-child(1),
-.service-item:nth-child(4),
+
 .service-item:nth-child(5){
-    width: calc(60% - 20px);
+    width: calc(70% - 20px);
 }
 .service-item:nth-child(2),
-.service-item:nth-child(3),
+
 .service-item:nth-child(6){
-    width: 40%;
+    width: 30%;
+}
+.service-item:nth-child(3)
+{
+    width: calc(50% - 20px);
+}
+.service-item:nth-child(4){
+    width: 50%;
 }
 .service-item:nth-child(1),
 .service-item:nth-child(3),
@@ -190,7 +216,7 @@ body{
     cursor: pointer;
 }
 .service-item:hover .item-img img{
-    transform: scale(10);
+    transform: scale(80);
 }
 .service-item .item-img{
     position: absolute;
@@ -227,9 +253,10 @@ body{
     font-size: 1.35em;
     font-family: var(--fontsbig);
     color: #fff;
+    margin-bottom: 10px;
 }
 .service-item .item-content_desc{
-    font-size: 0.7em;
+    font-size: 0.8em;
     color: #fff;
     font-family: var(--fontssmall);
     width: 100%;
@@ -245,22 +272,44 @@ body{
 .aboutus-boxleft_title{
     font-family: var(--fontsbig);
     margin-bottom: 30px;
+    font-size: 3em;
+    
+    color: var(--bigtitle)
 }
 .aboutus-boxleft_desc{
     font-size: 0.9em;
 }
 .aboutus-boxright{}
+.aboutus-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+.aboutus-item{
+    width: 49%;
+    background-color: green;
+    padding: 20px;
+    margin-bottom: 2%;
+}
+.aboutus-item:nth-child(1),
+.aboutus-item:nth-child(3){
+    margin-right: 2%;
+}
 
 /* whowork */
 .whowork{
-    padding: 50px 0;
+    padding: 100px 0;
+    background: rgba(240, 240, 240, 1);
 }
 .whowork-box{
     overflow: hidden;
 }
 .whowork-title{
     font-family: var(--fontsbig);
-    margin-bottom: 30px;
+    line-height: 1;
+    color: var(--bigtitle);
+    font-size: 3em;
 }
-
+.whowork-desc{
+    margin-bottom: 50px;
+}
 .item-whowork{}

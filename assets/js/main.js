@@ -3,8 +3,9 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     nav:false,
     autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:5000,
     autoplayHoverPause:true,
+    smartSpeed:1000,
     responsive:{
         0:{
             items:2
@@ -13,7 +14,7 @@ $('.owl-carousel').owlCarousel({
             items:3
         },
         1000:{
-            items:4
+            items:5
         }
     }
 })

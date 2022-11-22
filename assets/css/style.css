@@ -296,7 +296,23 @@ body{
 
 /* aboutus */
 .aboutus{
-    padding: 50px 0;
+    padding: 50px 0 0;
+    position: relative;
+}
+.aboutus:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 142px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 109% 105%;
+    margin-bottom: -2px;
+    transform:  scaleY(-1);
+    background-image: url(../../assets/img/section_separator_outwork.svg);
 }
 .aboutus-boxleft{}
 .aboutus-boxleft_title{
@@ -348,12 +364,70 @@ body{
     padding: 10px 20px 10px 40px;
     border-radius: 10px;
     color: #fff;
+    font-family: var(--fontsbig);
+    font-size: 1.2em;
 }
+.aboutus-boxright_img{
+    max-width: 140%;
+    margin-top: -100px;
+    transform: translateX(-75px);
+}
+
+/* call */
+.call{
+    background: var(--bigtitle);
+}
+.call-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0 100px;
+}
+.calll-wrap{
+    font-size: 0.9em;
+    color: #fff;
+}
+.calll-wrap span{
+    font-size: 3em;
+    font-family: var(--fontsbig);
+}
+.callr-wrap{
+    display: flex;
+}
+.callr-wrap a{
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+.callr-wrap a:hover{
+    text-decoration: none;
+}
+.callr-wrap a:first-child{
+    margin-right: 20px;
+}
+.callr-wrap a.whatsapp{
+    background: rgba(37, 211, 102, 1);
+    color: #fff;
+}
+.callr-wrap a.feedback{
+    background: rgba(52, 183, 241, 1);
+    color: #fff;
+}
+
 
 /* whowork */
 .whowork{
-    padding: 100px 0;
+    padding: 0 0 50px;
     background: rgba(240, 240, 240, 1);
+}
+.whowork:before{
+    content: '';
+    display: block;
+    height: 142px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 109% 105%;
+    margin-bottom: -2px;
+    background-image: url(../../assets/img/section_separator_outwork.svg);
 }
 .whowork-box{
     overflow: hidden;
@@ -364,8 +438,87 @@ body{
     color: var(--bigtitle);
     font-size: 3em;
     opacity: .5;
+    margin-top: 50px;
 }
 .whowork-desc{
+    font-size: 0.9em;
     margin-bottom: 50px;
 }
 .item-whowork{}
+
+
+
+
+
+
+/* contact */
+.contact{
+    padding: 100px 0;
+}
+
+.contactl-item{}
+.contactl-item_title{
+    font-size: 3em;
+    font-family: var(--fontsbig);
+    opacity: .5;
+    color: var(--bigtitle);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.contactl-item_desc{
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+.contactl-item .desc-items{
+    display: flex;
+    flex-direction: column;
+}
+.contactl-item .desc-items .desc-item{
+    display: flex;
+    padding: 15px;
+}
+.contactl-item .desc-items .desc-item .icon{
+    margin-right: 20px;
+    background: var(--bigtitle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    color: #fff;
+    border-radius: 10px;
+
+}
+.contactl-item .desc-items .desc-item .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactl-item .desc-items .desc-item .title a{
+    color: #333;
+}
+.contactl-item .desc-items .desc-item .title .phone{
+    font-family: var(--fontsbig);
+    color: var(--bigtitle);
+}
+.contactl-item .desc-items .desc-item .title a:hover{
+    text-decoration: none;
+}
+
+.contactr-item{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+/* footer */
+.footer{
+    background: var(--bigtitle);
+    padding: 50px 0 15px;
+}
+.copyright{
+    color: #fff;
+    font-size: .7em;
+    text-align: center;
+}
